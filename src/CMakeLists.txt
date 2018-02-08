@@ -1,10 +1,14 @@
 
 cmake_minimum_required(VERSION 3.3)
-project(pai)
+project(PAI)
 
 set(CMAKE_CXX_FLAGS "-g -Wall -pedantic -Werror -std=c++1z")
 
+set(CORELIBS m)
+
 add_subdirectory(poker-core)
-# add_library(cards cards.cpp)
-# add_executable(coupai cards)
-# target_link_libraries(coupai cards)
+include_directories(${PAI_SOURCE_DIR}/poker-core)
+link_directories(${PAI_BINARY_DIR}/poker-core)
+
+add_executable(pai pai.cpp)
+target_link_libraries(pai poker-core ${CORELIBS}) 

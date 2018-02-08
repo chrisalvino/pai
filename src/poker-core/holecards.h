@@ -24,10 +24,10 @@ public:
   
   void catASCII(std::ostream &os);
 
-  void CHoleCards::catASCIIHoleCardType(std::ostream &os);
+  void catASCIIHoleCardType(std::ostream &os);
 
-  static void CHoleCards::catASCIIHoleCardTypeFromIndex(int hctypeindex, std::ostream &os);	
-  static std::string CHoleCards::getStringHoleCardTypeFromIndex(int hctypeindex);
+  static void catASCIIHoleCardTypeFromIndex(int hctypeindex, std::ostream &os);	
+  static std::string getStringHoleCardTypeFromIndex(int hctypeindex);
 
   CCard getCard1(void) const { return m_Card1; }
   CCard getCard2(void) const { return m_Card2; }

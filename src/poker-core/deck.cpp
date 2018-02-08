@@ -1,6 +1,5 @@
 
 #include "deck.h"
-#include <windows.h>
 
 CDeck::CDeck(unsigned long seed)
 	: m_numLeft(0)
